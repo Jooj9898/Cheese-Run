@@ -1,14 +1,55 @@
-In this project, I developed a 2D interactive game on an STM32F031x6 microcontroller, showcasing my proficiency in embedded systems, real-time processing, and low-level hardware interfacing.
+# 🎮 Embedded Systems 2D Game on STM32F031x6
 
-Key Technical Features: 
-Display & Graphics Handling: Utilized custom graphics arrays to render images on a small 16x16 pixel display. The game involves pixel-based graphics that are displayed in frames, with each sprite being represented as a 2D array. The putImage() function handles rendering images on specific coordinates, and I implemented sprite flipping to enable movement animation.
+In this project, I developed a 2D interactive game on an **STM32F031x6 microcontroller**, showcasing my proficiency in embedded systems, real-time processing, and low-level hardware interfacing.
 
-GPIO & Input Handling: The game uses GPIO pins to handle user inputs (up, down, left, right). Each input is debounced using software, with pull-up resistors enabled on the buttons. The pinMode() function configures input pins, and I used efficient polling to capture button presses in real-time, ensuring a responsive gameplay experience.
+---
 
-Real-Time Processing: The game runs in a loop that processes user input, moves the character, and redraws the display accordingly. I implemented a SysTick interrupt with a 1 ms timer resolution to manage time-sensitive tasks like delay and animation. The game state is updated at a fixed rate to ensure smooth gameplay.
+## 🔧 **Key Technical Features**
 
-Collision Detection & Interaction: Implemented a collision detection algorithm using geometric checks to determine if any part of the moving character overlaps with predefined target areas (e.g., if a sprite is inside a designated rectangle). This is crucial for detecting interactions like hitting obstacles or completing in-game tasks.
+### 🎨 **Display & Graphics Handling**
+- Rendered pixel-based graphics on a **16x16 pixel display** using custom graphics arrays.
+- Implemented the `putImage()` function to render images on specific coordinates.
+- Enabled **sprite flipping** to support character movement animations.
 
-Optimized Performance: Focused on achieving the best performance by optimizing code for speed and memory usage. The game logic, such as input polling and graphics rendering, is streamlined to minimize processing overhead. I utilized efficient delay functions that rely on the SysTick timer to maintain timing accuracy without blocking the processor.
+### 🕹️ **GPIO & Input Handling**
+- Managed **user inputs** (up, down, left, right) via GPIO pins with software debouncing and pull-up resistors.
+- Configured inputs using the `pinMode()` function and implemented efficient polling for real-time responsiveness.
 
-Low-Level System Configuration: Implemented low-level hardware interfacing by directly manipulating microcontroller registers, including configuring the GPIO pins, enabling interrupts, and managing the system clock. This provided a hands-on experience with the underlying hardware architecture.
+### ⏱️ **Real-Time Processing**
+- Designed a **game loop** to handle:
+  - User input.
+  - Character movement.
+  - Frame-by-frame display updates.
+- Utilized a **SysTick interrupt** with a 1 ms timer resolution for time-sensitive tasks like delays and animations.
+
+### ⚠️ **Collision Detection & Interaction**
+- Developed a **collision detection algorithm** using geometric checks to detect sprite overlap with target areas.
+- Enabled interactions such as:
+  - Hitting obstacles.
+  - Completing in-game tasks.
+
+### 🚀 **Optimized Performance**
+- Streamlined game logic, including input polling and graphics rendering, for optimal speed and memory usage.
+- Leveraged efficient delay functions based on the SysTick timer for non-blocking, precise timing.
+
+### 🛠️ **Low-Level System Configuration**
+- Directly manipulated microcontroller registers for:
+  - GPIO pin configuration.
+  - Interrupt enablement.
+  - System clock management.
+- Gained hands-on experience with the **STM32 hardware architecture**.
+
+---
+
+## 💻 **Project Overview**
+This project highlights my ability to design and implement a functional and interactive game on a resource-constrained microcontroller platform. It required a deep understanding of:
+- Embedded systems principles.
+- Real-time constraints.
+- Hardware-software integration.
+
+---
+
+## 📽️ **Demonstration**
+Watch the project in action on YouTube:  
+[![YouTube Demo](https://img.shields.io/badge/Watch-Demo-red?logo=youtube)](https://www.youtube.com/watch?v=ijorRK4l044&ab_channel=CillianQuinn) 
+
